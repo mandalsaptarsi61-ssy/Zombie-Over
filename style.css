@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #1a1a1a;
+    color: #fff;
+}
+
+#gameContainer {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    background: #0a0a0a;
+    border: 3px solid #ff4444;
+    box-shadow: 0 0 20px rgba(255, 68, 68, 0.5);
+}
+
+#hud {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+    background: #1a1a1a;
+    border-bottom: 2px solid #ff4444;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.hud-item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.label {
+    color: #ff4444;
+    text-transform: uppercase;
+}
+
+#health {
+    color: #00ff00;
+    min-width: 40px;
+}
+
+#score {
+    color: #ffff00;
+    min-width: 60px;
+}
+
+#wave {
+    color: #ff6600;
+    min-width: 30px;
+}
+
+#ammo {
+    color: #00ccff;
+    min-width: 40px;
+}
+
+#gameCanvas {
+    display: block;
+    width: 100%;
+    height: 600px;
+    background: #000;
+    cursor: crosshair;
+}
+
+#gameOver {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.gameOverContent {
+    text-align: center;
+    background: rgba(255, 68, 68, 0.2);
+    padding: 40px;
+    border: 3px solid #ff4444;
+    border-radius: 10px;
+}
+
+.gameOverContent h1 {
+    font-size: 48px;
+    color: #ff4444;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #ff4444;
+}
+
+.gameOverContent p {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: #ffff00;
+}
+
+.gameOverContent button {
+    padding: 12px 30px;
+    font-size: 18px;
+    background: #ff4444;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.gameOverContent button:hover {
+    background: #ff6666;
+    box-shadow: 0 0 15px #ff4444;
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #hud {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    #gameCanvas {
+        height: 400px;
+    }
+
+    .gameOverContent h1 {
+        font-size: 32px;
+    }
+
+    .gameOverContent p {
+        font-size: 18px;
+    }
+}
