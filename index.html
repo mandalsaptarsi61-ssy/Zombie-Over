@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zombie Over - Top Down Shooter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <div id="hud">
+            <div class="hud-item">
+                <span class="label">Health:</span>
+                <span id="health">100</span>
+            </div>
+            <div class="hud-item">
+                <span class="label">Score:</span>
+                <span id="score">0</span>
+            </div>
+            <div class="hud-item">
+                <span class="label">Wave:</span>
+                <span id="wave">1</span>
+            </div>
+            <div class="hud-item">
+                <span class="label">Ammo:</span>
+                <span id="ammo">30</span>
+            </div>
+        </div>
+        <canvas id="gameCanvas"></canvas>
+        <div id="gameOver" style="display: none;">
+            <div class="gameOverContent">
+                <h1>GAME OVER</h1>
+                <p>Final Score: <span id="finalScore">0</span></p>
+                <button onclick="location.reload()">Restart Game</button>
+            </div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
